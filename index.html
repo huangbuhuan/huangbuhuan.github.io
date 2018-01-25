@@ -370,11 +370,11 @@ COPY target/spring-test.jar /test/spring-test.jar
 WORKDIR /test
 EXPOSE 9090
 CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar ./spring-test.jar&quot;]
-</code></pre><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><pre><code>FROM \&lt;image&gt; [AS \&lt;name&gt;]
+</code></pre><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><pre><code>FROM &lt;image&gt; [AS &lt;name&gt;]
 
-FROM \&lt;image&gt;[:\&lt;tag&gt;] [AS \&lt;name&gt;]
+FROM &lt;image&gt;[:&lt;tag&gt;] [AS &lt;name&gt;]
 
-FROM \&lt;image&gt;[@\&lt;digest&gt;] [AS \&lt;name&gt;]
+FROM &lt;image&gt;[@&lt;digest&gt;] [AS &lt;name&gt;]
 </code></pre><p><code>FROM</code> 指令会在基础镜像上创建新的镜像，这条指令了会去公共的仓库拉取镜像，可以和<code>ARG</code> 指令(唯一一个可以在<code>FROM</code> 指令前使用的命令)一起使用，tag和digest时可选择的, tag的默认值是latest，如果在构建的时候没有找到标签会构建失败。<br>例子：</p>
 <pre><code>ARG VERSION=latest
 FROM base:$VERSION
@@ -711,6 +711,19 @@ CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar test.jar&quot;]
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/huangbuhuan" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
           
         </div>
 

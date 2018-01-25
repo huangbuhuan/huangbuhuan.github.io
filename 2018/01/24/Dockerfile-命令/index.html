@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄步欢的个人博客">
 <meta property="og:description" content="Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-tes">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T17:00:36.058Z">
+<meta property="og:updated_time" content="2018-01-24T17:04:26.813Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dockerfile 命令">
 <meta name="twitter:description" content="Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-tes">
@@ -369,11 +369,11 @@ COPY target/spring-test.jar /test/spring-test.jar
 WORKDIR /test
 EXPOSE 9090
 CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar ./spring-test.jar&quot;]
-</code></pre><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><pre><code>FROM \&lt;image&gt; [AS \&lt;name&gt;]
+</code></pre><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><pre><code>FROM &lt;image&gt; [AS &lt;name&gt;]
 
-FROM \&lt;image&gt;[:\&lt;tag&gt;] [AS \&lt;name&gt;]
+FROM &lt;image&gt;[:&lt;tag&gt;] [AS &lt;name&gt;]
 
-FROM \&lt;image&gt;[@\&lt;digest&gt;] [AS \&lt;name&gt;]
+FROM &lt;image&gt;[@&lt;digest&gt;] [AS &lt;name&gt;]
 </code></pre><p><code>FROM</code> 指令会在基础镜像上创建新的镜像，这条指令了会去公共的仓库拉取镜像，可以和<code>ARG</code> 指令(唯一一个可以在<code>FROM</code> 指令前使用的命令)一起使用，tag和digest时可选择的, tag的默认值是latest，如果在构建的时候没有找到标签会构建失败。<br>例子：</p>
 <pre><code>ARG VERSION=latest
 FROM base:$VERSION
@@ -585,6 +585,19 @@ CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar test.jar&quot;]
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/huangbuhuan" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      Github
+                    
+                </a>
+              </span>
+            
           
         </div>
 
