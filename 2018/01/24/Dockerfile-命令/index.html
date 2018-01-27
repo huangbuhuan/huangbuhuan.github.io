@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-tes">
+<meta name="description" content="简介Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-t">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dockerfile 命令">
 <meta property="og:url" content="https://blog.buhuan.me/2018/01/24/Dockerfile-命令/index.html">
 <meta property="og:site_name" content="黄步欢的个人博客">
-<meta property="og:description" content="Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-tes">
+<meta property="og:description" content="简介Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T17:04:26.813Z">
+<meta property="og:updated_time" content="2018-01-27T10:54:10.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dockerfile 命令">
-<meta name="twitter:description" content="Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-tes">
+<meta name="twitter:description" content="简介Dockerfile是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。例子： FROM relateiq/oracle-java8:latest COPY target/spring-test.jar /test/spring-t">
 
 
 
@@ -390,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  990
+                  992
                 </span>
               
 
@@ -427,13 +427,13 @@
       
 
       
-        <p><code>Dockerfile</code>是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。<br>例子：</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><code>Dockerfile</code>是使用Docker必须掌握的，它用于快速创建Docker, Dockerfile文件的注释都是“#”开始的，每一行都是一个命令，Dockerfile命令分为4个部分：基础镜像、维护者信息、镜像操作指令和容器启动指令。<br>例子：</p>
 <pre><code>FROM relateiq/oracle-java8:latest
 COPY target/spring-test.jar /test/spring-test.jar
 WORKDIR /test
 EXPOSE 9090
 CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar ./spring-test.jar&quot;]
-</code></pre><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><pre><code>FROM &lt;image&gt; [AS &lt;name&gt;]
+</code></pre><h1 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h1><pre><code>FROM &lt;image&gt; [AS &lt;name&gt;]
 
 FROM &lt;image&gt;[:&lt;tag&gt;] [AS &lt;name&gt;]
 
@@ -441,10 +441,10 @@ FROM &lt;image&gt;[@&lt;digest&gt;] [AS &lt;name&gt;]
 </code></pre><p><code>FROM</code> 指令会在基础镜像上创建新的镜像，这条指令了会去公共的仓库拉取镜像，可以和<code>ARG</code> 指令(唯一一个可以在<code>FROM</code> 指令前使用的命令)一起使用，tag和digest时可选择的, tag的默认值是latest，如果在构建的时候没有找到标签会构建失败。<br>例子：</p>
 <pre><code>ARG VERSION=latest
 FROM base:$VERSION
-</code></pre><h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><p><code>MAINTAINER</code>用来写维护者的信息。</p>
+</code></pre><h1 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h1><p><code>MAINTAINER</code>用来写维护者的信息。</p>
 <p>例子:</p>
 <pre><code>MAINTAINER BuHuan Huang &lt;buhuanhuang@gmail.com&gt;
-</code></pre><h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><p><code>ADD</code>指令用来将构建环境的文件和目录复制到镜像中，如果源文件是压缩文件，会进行解压缩，支持gzip、bzip、xz等。在Linux的容器中可以使用–chown=\<user>:\<group>命令。</group></user></p>
+</code></pre><h1 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h1><p><code>ADD</code>指令用来将构建环境的文件和目录复制到镜像中，如果源文件是压缩文件，会进行解压缩，支持gzip、bzip、xz等。在Linux的容器中可以使用–chown=\<user>:\<group>命令。</group></user></p>
 <p>例子:    </p>
 <pre><code># 添加所有hom开头的文件
 ADD hom* /mydir/       
@@ -452,28 +452,28 @@ ADD hom* /mydir/
 ADD hom?.txt /mydir/    
 # 将target文件夹中的test.jar文件复制到容器的test目录下
 ADD target/test.jar /test/test.jar
-</code></pre><h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><p>和<code>ADD</code>指令相似，不过不会进行文件的提取和解压缩工作，由改指令创建的文件或目录的UID和GID都会这只为0。</p>
+</code></pre><h1 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h1><p>和<code>ADD</code>指令相似，不过不会进行文件的提取和解压缩工作，由改指令创建的文件或目录的UID和GID都会这只为0。</p>
 <p>例子：</p>
 <pre><code>COPY target/test.jar /test/test.jar
-</code></pre><h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><p><code>RUN</code>指令用于构建时执行某些命令。</p>
+</code></pre><h1 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h1><p><code>RUN</code>指令用于构建时执行某些命令。</p>
 <p>例子：</p>
 <pre><code>FROM ubuntu
 RUN echo foo &gt; bar
-</code></pre><h3 id="ARG"><a href="#ARG" class="headerlink" title="ARG"></a>ARG</h3><p><code>ARG</code>指令用来定义可以在docker build时传递给构建的变量</p>
+</code></pre><h1 id="ARG"><a href="#ARG" class="headerlink" title="ARG"></a>ARG</h1><p><code>ARG</code>指令用来定义可以在docker build时传递给构建的变量</p>
 <pre><code>ARG USER
 ARG VERSION=latest
 </code></pre><p>在使用命令<code>docker build --build-arg USER=hbh -t hbh/test .</code>时会把user的值设置为hbh，因为没有传入VERSION的值，所以VERSION会使用默认值latest。</p>
-<h3 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h3><p><code>ENV</code>指令可以用来设置环境变量, 也可以在启动的时候设置<code>docker run -ti -e &quot;JAVA_HOME=/usr/local/java&quot; test env</code><br>例子：</p>
+<h1 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h1><p><code>ENV</code>指令可以用来设置环境变量, 也可以在启动的时候设置<code>docker run -ti -e &quot;JAVA_HOME=/usr/local/java&quot; test env</code><br>例子：</p>
 <pre><code>ENV JAVA_HOME /usr/local/java
-</code></pre><h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><p><code>EXPOSE</code>指令暴露对外端口</p>
+</code></pre><h1 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h1><p><code>EXPOSE</code>指令暴露对外端口</p>
 <p>例子：</p>
 <pre><code>EXPOSE 8080
-</code></pre><h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><p><code>WORKDIR</code>指令可以在创建容器时，在容器内部设置一个工作目录，让ENTRYPOINT或CMD命令的指定程序在这个目录下运行.</p>
+</code></pre><h1 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h1><p><code>WORKDIR</code>指令可以在创建容器时，在容器内部设置一个工作目录，让ENTRYPOINT或CMD命令的指定程序在这个目录下运行.</p>
 <p>例子：</p>
 <pre><code># 在test目录下使用java -jar test.jar命令
 WORKDIR /test
 CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar test.jar&quot;]
-</code></pre><h3 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h3><p>指定容器由什么用户运行，如果不使用user默认使用root用户运行。</p>
+</code></pre><h1 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h1><p>指定容器由什么用户运行，如果不使用user默认使用root用户运行。</p>
 <p>例子：</p>
 <pre><code>USER user
 USER user:group
@@ -481,25 +481,25 @@ USER uid
 USER uid:gid
 USER user:gid
 USER uid:group
-</code></pre><h3 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h3><p><code>ONBUILD</code>指令能为镜像添加触发器，当一个镜像被其他镜像用作基础镜像时，如果不想将某条命令在基础镜像执行而在其他镜像执行时使用。</p>
+</code></pre><h1 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h1><p><code>ONBUILD</code>指令能为镜像添加触发器，当一个镜像被其他镜像用作基础镜像时，如果不想将某条命令在基础镜像执行而在其他镜像执行时使用。</p>
 <p>例子：</p>
 <pre><code>ONBUILD ADD . /app/src
 ONBUILD cd /app/src &amp;&amp; make
-</code></pre><h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><p><code>VOLUME</code> 指令可以指定某些目录挂载文为匿名卷，这样运行的时候不会向容器写入大量的数据，并可以使用数组挂载多个目录。</p>
+</code></pre><h1 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h1><p><code>VOLUME</code> 指令可以指定某些目录挂载文为匿名卷，这样运行的时候不会向容器写入大量的数据，并可以使用数组挂载多个目录。</p>
 <p>例子：</p>
 <pre><code>VOLUME [&quot;/opt&quot;]
 VOLUME [&quot;/opt&quot;, &quot;/data&quot;]
-</code></pre><h3 id="LABEL"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</h3><p><code>LABEL</code>指令用于为Docker镜像添加元数据, 推荐将所有的元数据都放到一条<code>LABEL</code>标签中，以防止创建过多的镜像层。</p>
+</code></pre><h1 id="LABEL"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</h1><p><code>LABEL</code>指令用于为Docker镜像添加元数据, 推荐将所有的元数据都放到一条<code>LABEL</code>标签中，以防止创建过多的镜像层。</p>
 <p>例子：</p>
 <pre><code>LABEL version=&quot;1.0&quot;
 LABEL user1=&quot;zs&quot; user2 =&quot;lisi&quot;
-</code></pre><h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p><code>CMD</code>指令在容器启动的时候执行，由于/bin/bash -c 在执行命令的时候会导致意料之外的行为，所以官方推荐使用以数组来设置要执行的命令，<code>CMD</code>命令在容器启动的时候可以被覆盖如 <code>docker run - i -t hbh/test /bin/ps</code> 这样就不会运行指定的CMD命令了。</p>
+</code></pre><h1 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h1><p><code>CMD</code>指令在容器启动的时候执行，由于/bin/bash -c 在执行命令的时候会导致意料之外的行为，所以官方推荐使用以数组来设置要执行的命令，<code>CMD</code>命令在容器启动的时候可以被覆盖如 <code>docker run - i -t hbh/test /bin/ps</code> 这样就不会运行指定的CMD命令了。</p>
 <p>例子：</p>
 <pre><code>CMD [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
 CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar test.jar&quot;]
-</code></pre><h3 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h3><p><code>ENTRYPOINT</code>指令与<code>CMD</code>指令相似，不过<code>ENTRYPOINT</code>指令不会在容器启动的时候被覆盖</p>
+</code></pre><h1 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h1><p><code>ENTRYPOINT</code>指令与<code>CMD</code>指令相似，不过<code>ENTRYPOINT</code>指令不会在容器启动的时候被覆盖</p>
 <pre><code>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
-</code></pre><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+</code></pre><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
 <li><a href="https://docs.docker.com/engine/reference/builder/#from" target="_blank" rel="noopener">官方文档</a></li>
 <li><a href="https://yeasy.gitbooks.io/docker_practice/content/image/build.html" target="_blank" rel="noopener">《Docker–从入门到实践》</a></li>
 </ol>
@@ -693,7 +693,7 @@ CMD [&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;java -jar test.jar&quot;]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#FROM"><span class="nav-number">1.</span> <span class="nav-text"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAINTAINER"><span class="nav-number">2.</span> <span class="nav-text"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ADD"><span class="nav-number">3.</span> <span class="nav-text"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COPY"><span class="nav-number">4.</span> <span class="nav-text"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RUN"><span class="nav-number">5.</span> <span class="nav-text"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARG"><span class="nav-number">6.</span> <span class="nav-text"><a href="#ARG" class="headerlink" title="ARG"></a>ARG</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ENV"><span class="nav-number">7.</span> <span class="nav-text"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EXPOSE"><span class="nav-number">8.</span> <span class="nav-text"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WORKDIR"><span class="nav-number">9.</span> <span class="nav-text"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#USER"><span class="nav-number">10.</span> <span class="nav-text"><a href="#USER" class="headerlink" title="USER"></a>USER</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ONBUILD"><span class="nav-number">11.</span> <span class="nav-text"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VOLUME"><span class="nav-number">12.</span> <span class="nav-text"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LABEL"><span class="nav-number">13.</span> <span class="nav-text"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMD"><span class="nav-number">14.</span> <span class="nav-text"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ENTRYPOINT"><span class="nav-number">15.</span> <span class="nav-text"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;" class="headerlink" title="&#x53C2;&#x8003;&#x94FE;&#x63A5;"></a>&#x53C2;&#x8003;&#x94FE;&#x63A5;</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FROM"><span class="nav-number">2.</span> <span class="nav-text">FROM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MAINTAINER"><span class="nav-number">3.</span> <span class="nav-text">MAINTAINER</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ADD"><span class="nav-number">4.</span> <span class="nav-text">ADD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#COPY"><span class="nav-number">5.</span> <span class="nav-text">COPY</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RUN"><span class="nav-number">6.</span> <span class="nav-text">RUN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ARG"><span class="nav-number">7.</span> <span class="nav-text">ARG</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ENV"><span class="nav-number">8.</span> <span class="nav-text">ENV</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EXPOSE"><span class="nav-number">9.</span> <span class="nav-text">EXPOSE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WORKDIR"><span class="nav-number">10.</span> <span class="nav-text">WORKDIR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#USER"><span class="nav-number">11.</span> <span class="nav-text">USER</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ONBUILD"><span class="nav-number">12.</span> <span class="nav-text">ONBUILD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VOLUME"><span class="nav-number">13.</span> <span class="nav-text">VOLUME</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LABEL"><span class="nav-number">14.</span> <span class="nav-text">LABEL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CMD"><span class="nav-number">15.</span> <span class="nav-text">CMD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ENTRYPOINT"><span class="nav-number">16.</span> <span class="nav-text">ENTRYPOINT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">17.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
