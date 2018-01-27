@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="blog.buhuan.me/"/>
+  <link href="https://blog.buhuan.me/"/>
   <updated>2018-01-24T17:04:26.813Z</updated>
-  <id>blog.buhuan.me/</id>
+  <id>https://blog.buhuan.me/</id>
   
   <author>
     <name>黄步欢</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Dockerfile 命令</title>
-    <link href="blog.buhuan.me/2018/01/24/Dockerfile-%E5%91%BD%E4%BB%A4/"/>
-    <id>blog.buhuan.me/2018/01/24/Dockerfile-命令/</id>
+    <link href="https://blog.buhuan.me/2018/01/24/Dockerfile-%E5%91%BD%E4%BB%A4/"/>
+    <id>https://blog.buhuan.me/2018/01/24/Dockerfile-命令/</id>
     <published>2018-01-24T13:10:55.000Z</published>
     <updated>2018-01-24T17:04:26.813Z</updated>
     
@@ -35,14 +35,14 @@
     </summary>
     
     
-      <category term="Docker" scheme="blog.buhuan.me/tags/Docker/"/>
+      <category term="Docker" scheme="https://blog.buhuan.me/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="blog.buhuan.me/2017/12/19/hello-world/"/>
-    <id>blog.buhuan.me/2017/12/19/hello-world/</id>
+    <link href="https://blog.buhuan.me/2017/12/19/hello-world/"/>
+    <id>https://blog.buhuan.me/2017/12/19/hello-world/</id>
     <published>2017-12-19T13:29:06.000Z</published>
     <updated>2017-12-19T13:29:06.000Z</updated>
     
