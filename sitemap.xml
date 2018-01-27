@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>blog.buhuan.me/board/index.html</loc>
+    
+    <lastmod>2018-01-27T09:51:51.445Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>blog.buhuan.me/2018/01/24/Dockerfile-%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2018-01-24T17:04:26.813Z</lastmod>
