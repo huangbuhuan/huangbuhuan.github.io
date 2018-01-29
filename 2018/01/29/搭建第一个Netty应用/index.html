@@ -96,13 +96,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="代码改变世界">
-<meta property="og:url" content="https://blog.buhuan.me/tags/Dockerfile/index.html">
+<meta name="description" content="搭建第一个Netty应用程序本篇文章主要记录如何搭建一个简单的Netty服务器和客户端。 环境:  Java 8 Netty4  依赖: &amp;lt;dependencies&amp;gt;     &amp;lt;dependency&amp;gt;         &amp;lt;groupId&amp;gt;io.netty&amp;lt;/groupId&amp;gt;         &amp;lt;artifactId&amp;gt;netty-all&amp;lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建第一个Netty应用">
+<meta property="og:url" content="https://blog.buhuan.me/2018/01/29/搭建第一个Netty应用/index.html">
 <meta property="og:site_name" content="代码改变世界">
+<meta property="og:description" content="搭建第一个Netty应用程序本篇文章主要记录如何搭建一个简单的Netty服务器和客户端。 环境:  Java 8 Netty4  依赖: &amp;lt;dependencies&amp;gt;     &amp;lt;dependency&amp;gt;         &amp;lt;groupId&amp;gt;io.netty&amp;lt;/groupId&amp;gt;         &amp;lt;artifactId&amp;gt;netty-all&amp;lt;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-29T12:10:36.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代码改变世界">
+<meta name="twitter:title" content="搭建第一个Netty应用">
+<meta name="twitter:description" content="搭建第一个Netty应用程序本篇文章主要记录如何搭建一个简单的Netty服务器和客户端。 环境:  Java 8 Netty4  依赖: &amp;lt;dependencies&amp;gt;     &amp;lt;dependency&amp;gt;         &amp;lt;groupId&amp;gt;io.netty&amp;lt;/groupId&amp;gt;         &amp;lt;artifactId&amp;gt;netty-all&amp;lt;">
 
 
 
@@ -131,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.buhuan.me/tags/Dockerfile/"/>
+  <link rel="canonical" href="https://blog.buhuan.me/2018/01/29/搭建第一个Netty应用/"/>
 
 
 
 
 
-  <title>标签: Dockerfile | 代码改变世界</title>
+  <title>搭建第一个Netty应用 | 代码改变世界</title>
   
 
 
@@ -171,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
    <a href="https://github.com/huangbuhuan"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,54 +293,342 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Dockerfile<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.buhuan.me/2018/01/29/搭建第一个Netty应用/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄步欢">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="代码改变世界">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/24/Dockerfile-命令/" itemprop="url">
-              
-                <span itemprop="name">Dockerfile 命令</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">搭建第一个Netty应用</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-24T21:10:55+08:00"
-              content="2018-01-24" >
-          01-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T20:07:42+08:00">
+                2018-01-29
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/29/搭建第一个Netty应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/01/29/搭建第一个Netty应用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  696
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="搭建第一个Netty应用程序"><a href="#搭建第一个Netty应用程序" class="headerlink" title="搭建第一个Netty应用程序"></a>搭建第一个Netty应用程序</h2><p>本篇文章主要记录如何搭建一个简单的Netty服务器和客户端。</p>
+<p>环境:</p>
+<ul>
+<li>Java 8</li>
+<li>Netty4</li>
+</ul>
+<p>依赖:</p>
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;io.netty&lt;/groupId&gt;
+        &lt;artifactId&gt;netty-all&lt;/artifactId&gt;
+        &lt;version&gt;4.1.11.Final&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre><h2 id="编写Echo服务器"><a href="#编写Echo服务器" class="headerlink" title="编写Echo服务器"></a>编写Echo服务器</h2><p>所有的Netty服务器都需要以下两个部分。</p>
+<ul>
+<li>至少一个ChannelHandler：用来处理业务逻辑</li>
+<li>引导：配置服务器启动代码，将服务器绑定到监听连接请求的端口上。</li>
+</ul>
+<p>EchoServerHandler类：用来处理核心业务逻辑</p>
+<pre><code>@ChannelHandler.Sharable
+public class EchoServerHandler extends ChannelInboundHandlerAdapter{
+
+    @Override
+    public void channelRead(ChannelHandlerContext context, Object msg) {
+        ByteBuf in = (ByteBuf) msg;
+        System.out.println(&quot;server received: &quot; + in.toString(CharsetUtil.UTF_8));
+        context.write(in);
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) {
+        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext context, Throwable couse) {
+        couse.printStackTrace();
+        context.close();
+    }
+}
+</code></pre><p>EchoServer类：配置服务器，并将入站消息通知给EchoServerHandler实例。</p>
+<pre><code>public class EchoServer {
+
+    private final int port;
+
+    public EchoServer(int port) {
+        this.port = port;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.err.println(&quot;Usage: &quot; + EchoServer.class.getSimpleName() + &quot;&lt;port&gt;&quot;);
+        int port = 8999;
+        new EchoServer(port).start();
+    }
+
+    public void start() throws Exception{
+        final EchoServerHandler serverHandler = new EchoServerHandler();
+        EventLoopGroup group = new NioEventLoopGroup();
+        try {
+            ServerBootstrap b = new ServerBootstrap();
+            b.group(group).channel(NioServerSocketChannel.class)
+             .localAddress(new InetSocketAddress(port)).childHandler(new ChannelInitializer&lt;SocketChannel&gt;() {
+                @Override
+                protected void initChannel(SocketChannel socketChannel) throws Exception {
+                    socketChannel.pipeline().addLast(serverHandler);
+                }
+            });
+            ChannelFuture future = b.bind().sync();
+            future.channel().closeFuture().sync();
+        } finally {
+            group.shutdownGracefully().sync();
+        }
+    }
+}
+</code></pre><p>服务器主要的代码组件</p>
+<ul>
+<li>EchoServerHandler实现业务逻辑</li>
+<li>main()引导服务器</li>
+</ul>
+<p>引导过程：</p>
+<ul>
+<li>创建一个ServerBootstap实例以引导和绑定服务器；</li>
+<li>创建并分配一个NioEventLoopGroup实例以进行事件的处理，如接受新连接以及读写数据；</li>
+<li>指定服务器绑定的本地的InetSocketAddress；</li>
+<li>使用一个Handler实例初始化新的Channel；</li>
+<li>调用ServerBootstap.bind()方法以绑定服务器；</li>
+</ul>
+<h2 id="编写Echo客户端"><a href="#编写Echo客户端" class="headerlink" title="编写Echo客户端"></a>编写Echo客户端</h2><p>Echo客户端：</p>
+<ol>
+<li>连接服务器</li>
+<li>发送一个或多个消息</li>
+<li>对于每个消息，等待并接受从服务器发回的相同的消息</li>
+<li>关闭连接</li>
+</ol>
+<p>ChannelHandler类：实现客户端逻辑</p>
+<ul>
+<li>channelActive()和服务器建立连接后调用</li>
+<li>channelRead()从服务器接受到一条信息后调用</li>
+<li>exceptionCaught()处理过程中出现异常时被调用</li>
+</ul>
+<pre><code>@ChannelHandler.Sharable
+public class EchoClientHandle extends SimpleChannelInboundHandler&lt;ByteBuf&gt;{
+
+    @Override
+    public void channelActive(ChannelHandlerContext context) {
+        context.writeAndFlush(Unpooled.copiedBuffer(&quot;Netty rocks&quot;, CharsetUtil.UTF_8));
+    }
+
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
+        System.out.println(&quot;Client received: &quot; + byteBuf.toString(CharsetUtil.UTF_8));
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext context, Throwable cause) {
+        cause.printStackTrace();
+        context.close();
+    }
+}
+</code></pre><p>EchoClient类：引导客户端</p>
+<pre><code>public class EchoClient {
+
+    // 使用的是服务器的地址
+    private final String host;
+    private final int port;
+
+    public EchoClient(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+
+    public void start() throws Exception{
+        EventLoopGroup group = new NioEventLoopGroup();
+        try {
+            Bootstrap b = new Bootstrap();
+            b.group(group)
+             .channel(NioSocketChannel.class)
+             .remoteAddress(new InetSocketAddress(host, port))
+             .handler(new ChannelInitializer&lt;SocketChannel&gt;() {
+                 @Override
+                 protected void initChannel(SocketChannel socketChannel) throws Exception {
+                     socketChannel.pipeline().addLast(new EchoClientHandle());
+                 }
+             });
+            ChannelFuture future = b.connect().sync();
+            future.channel().closeFuture().sync();
+        } finally {
+            group.shutdownGracefully().sync();
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        new EchoClient(&quot;localhost&quot;, 8999).start();
+    }
+}
+</code></pre><p>GitHub地址:<a href="https://github.com/huangbuhuan/netty-demo" target="_blank" rel="noopener">https://github.com/huangbuhuan/netty-demo</a></p>
+<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h2><ul>
+<li>《Netty In Action》</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/24/Dockerfile-命令/" rel="next" title="Dockerfile 命令">
+                <i class="fa fa-chevron-left"></i> Dockerfile 命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -344,6 +636,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -364,8 +667,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/photo.jpg"
@@ -458,6 +770,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建第一个Netty应用程序"><span class="nav-number">1.</span> <span class="nav-text">搭建第一个Netty应用程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写Echo服务器"><span class="nav-number">2.</span> <span class="nav-text">编写Echo服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写Echo客户端"><span class="nav-number">3.</span> <span class="nav-text">编写Echo客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考连接"><span class="nav-number">4.</span> <span class="nav-text">参考连接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -585,10 +913,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -606,6 +934,18 @@
       <script id="dsq-count-scr" src="https://huangbh.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.buhuan.me/2018/01/29/搭建第一个Netty应用/';
+          this.page.identifier = '2018/01/29/搭建第一个Netty应用/';
+          this.page.title = '搭建第一个Netty应用';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://huangbh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
