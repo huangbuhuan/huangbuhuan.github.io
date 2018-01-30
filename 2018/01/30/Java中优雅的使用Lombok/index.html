@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,Lombok," />
 
 
 
@@ -96,13 +96,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="代码改变世界">
-<meta property="og:url" content="https://blog.buhuan.me/archives/2018/index.html">
+<meta name="description" content="#Lombok简介及入门使用  Lombok 是一种 Java实用工具，可用来帮助开发人员消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。一个标准的Java bean 一般具有若干属性，每个属性具有getter()和setter()方法，Lombok中也用到了注解，但是它并没有用到反射，而是通过一些奇技淫巧，在代码编译时期动态将注解替换为具体的代码。所以JV">
+<meta name="keywords" content="Java,Lombok">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中优雅的使用Lombok">
+<meta property="og:url" content="https://blog.buhuan.me/2018/01/30/Java中优雅的使用Lombok/index.html">
 <meta property="og:site_name" content="代码改变世界">
+<meta property="og:description" content="#Lombok简介及入门使用  Lombok 是一种 Java实用工具，可用来帮助开发人员消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。一个标准的Java bean 一般具有若干属性，每个属性具有getter()和setter()方法，Lombok中也用到了注解，但是它并没有用到反射，而是通过一些奇技淫巧，在代码编译时期动态将注解替换为具体的代码。所以JV">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-30T15:23:09.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代码改变世界">
+<meta name="twitter:title" content="Java中优雅的使用Lombok">
+<meta name="twitter:description" content="#Lombok简介及入门使用  Lombok 是一种 Java实用工具，可用来帮助开发人员消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。一个标准的Java bean 一般具有若干属性，每个属性具有getter()和setter()方法，Lombok中也用到了注解，但是它并没有用到反射，而是通过一些奇技淫巧，在代码编译时期动态将注解替换为具体的代码。所以JV">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.buhuan.me/archives/2018/"/>
+  <link rel="canonical" href="https://blog.buhuan.me/2018/01/30/Java中优雅的使用Lombok/"/>
 
 
 
 
 
-  <title>归档 | 代码改变世界</title>
+  <title>Java中优雅的使用Lombok | 代码改变世界</title>
   
 
 
@@ -171,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
    <a href="https://github.com/huangbuhuan"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,185 +294,339 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.buhuan.me/2018/01/30/Java中优雅的使用Lombok/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄步欢">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="代码改变世界">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">Java中优雅的使用Lombok</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-30T23:19:25+08:00">
+                2018-01-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/30/Java中优雅的使用Lombok/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/01/30/Java中优雅的使用Lombok/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/30/Java中优雅的使用Lombok/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">Java中优雅的使用Lombok</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  739
+                </span>
               
-            </a>
-        
-      </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-30T23:19:25+08:00"
-              content="2018-01-30" >
-          01-30
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/30/Java虚拟机类加载机制/" itemprop="url">
-              
-                <span itemprop="name">Java虚拟机类加载机制</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-30T23:16:42+08:00"
-              content="2018-01-30" >
-          01-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>#Lombok简介及入门使用</p>
+<blockquote>
+<p><a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a> 是一种 Java实用工具，可用来帮助开发人员消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。一个标准的Java bean 一般具有若干属性，每个属性具有getter()和setter()方法，Lombok中也用到了注解，但是它并没有用到反射，而是通过一些奇技淫巧，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码，和我们手动编写的包含了各种工具方法的类相同。</p>
+</blockquote>
+<p>添加maven依赖</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+    &lt;version&gt;1.16.16&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><p>##Lombok注解</p>
+<ul>
+<li>@Data：注解在类上，将类提供的所有属性都添加get、set方法，并添加、equals、canEquals、hashCode、toString方法</li>
+<li>@Setter：注解在类上，为所有属性添加set方法、注解在属性上为该属性提供set方法</li>
+<li>@Getter：注解在类上，为所有的属性添加get方法、注解在属性上为该属性提供get方法</li>
+<li>@NotNull：在参数中使用时，如果调用时传了null值，就会抛出空指针异常</li>
+<li>@Synchronized 用于方法，可以锁定指定的对象，如果不指定，则默认创建一个对象锁定</li>
+<li>@Log作用于类，创建一个log属性</li>
+<li>@Builder：使用builder模式创建对象</li>
+<li>@NoArgsConstructor：创建一个无参构造函数</li>
+<li>@AllArgsConstructor：创建一个全参构造函数</li>
+<li>@ToStirng：创建一个toString方法</li>
+<li>@Accessors(chain = true)使用链式设置属性，set方法返回的是this对象。</li>
+<li>@RequiredArgsConstructor：创建对象</li>
+<li>@UtilityClass:工具类</li>
+<li>@ExtensionMethod:设置父类</li>
+<li>@FieldDefaults：设置属性的使用范围，如private、public等，也可以设置属性是否被final修饰。</li>
+<li>@Cleanup: 关闭流、连接点。</li>
+<li>@EqualsAndHashCode：重写equals和hashcode方法。</li>
+<li>@toString：创建toString方法。</li>
+</ul>
+<p>##一些使用的例子</p>
+<p>###普通的bean：</p>
+<pre><code>public class User {
+    private String id;
+    private String name;
+    private Integer age;
 
-        
-        
+    public String getId() {
+        return id;
+    }
 
-        
+    public void setId(String id) {
+        this.id = id;
+    }
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    public String getName() {
+        return name;
+    }
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/29/搭建第一个Netty应用/" itemprop="url">
-              
-                <span itemprop="name">搭建第一个Netty应用</span>
-              
-            </a>
-        
-      </h3>
+    public void setName(String name) {
+        this.name = name;
+    }
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-29T20:07:42+08:00"
-              content="2018-01-29" >
-          01-29
-        </time>
-      </div>
+    public Integer getAge() {
+        return age;
+    }
 
-    </header>
-  </article>
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+}
+</code></pre><p>###使用 lambok时</p>
+<p>使用lombok，代码可以变得非常的简洁，看着也舒服。</p>
+<pre><code>@Setter
+@Getter
+public class User {
+    private String id;
+    private String name;
+    private Integer age;
+}
 
+public static void main(String[] args) {
+    User user = new User();
+    user.setId(&quot;1&quot;);
+    user.setName(&quot;name&quot;);
+    user.setAge(1);
+}
+</code></pre><p>##@Accessors(chain = true)：使用链式创建:</p>
+<pre><code>@Setter
+@Getter
+@Accessors(chain = true)
+public class User {
+    private String id;
+    private String name;
+    private Integer age;
+}
 
+public static void main(String[] args) {
+    //使用@Accessors(chain = true)
+    User userChain = new User();
+    userChain.setId(&quot;1&quot;).setName(&quot;chain&quot;).setAge(1);
+}
+</code></pre><p>##@Builder：使用builder模式创建对象</p>
+<pre><code>@Setter
+@Getter
+@Builder
+public class User {
+    private String id;
+    private String name;
+    private Integer age;
+}
+
+public static void main(String[] args) {
+    User user = User.builder().id(&quot;1&quot;).name(&quot;builder&quot;).age(1).build();
+    System.out.println(user.getId());
+}
+</code></pre><p>##@UtilityClass：工具类注解</p>
+<pre><code>@UtilityClass
+public class Utility {
+
+    public String getName() {
+        return &quot;name&quot;;
+    }
+}
+
+public static void main(String[] args) {
+    // Utility utility = new Utility(); 构造函数为私有的,
+    System.out.println(Utility.getName());
+
+}
+</code></pre><p><strong>参考链接：</strong></p>
+<ul>
+<li><a href="http://www.2cto.com/kf/201603/491479.html" target="_blank" rel="noopener">Lombok 介绍及基本使用方法</a></li>
+<li><a href="https://github.com/rzwitserloot/lombok" target="_blank" rel="noopener">Github项目地址</a></li>
+<li><a href="https://github.com/peichhorn/lombok-pg" target="_blank" rel="noopener">栗子演示</a></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/01/24/Dockerfile-命令/" itemprop="url">
-              
-                <span itemprop="name">Dockerfile 命令</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-24T21:10:55+08:00"
-              content="2018-01-24" >
-          01-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Lombok/" rel="tag"># Lombok</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/30/Java虚拟机类加载机制/" rel="next" title="Java虚拟机类加载机制">
+                <i class="fa fa-chevron-left"></i> Java虚拟机类加载机制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -475,6 +634,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -716,11 +886,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -739,6 +907,18 @@
       <script id="dsq-count-scr" src="https://huangbh.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.buhuan.me/2018/01/30/Java中优雅的使用Lombok/';
+          this.page.identifier = '2018/01/30/Java中优雅的使用Lombok/';
+          this.page.title = 'Java中优雅的使用Lombok';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://huangbh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
