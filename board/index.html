@@ -339,10 +339,13 @@
           
   <div class="comments" id="comments">
     
-        <div onclick="ShowGitment()" id="gitment-display-button">显示评论</div>
-        <div id="gitment-container" style="display:none"></div>
-        <div id="gitment-container"></div>
-   
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
   </div>
 
 
@@ -603,6 +606,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://huangbh.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.buhuan.me/board/index.html';
+          this.page.identifier = 'board/index.html';
+          this.page.title = '留言';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://huangbh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -618,36 +641,8 @@
 
 
 
-  
 
 
-
-
-
-
-   
-   
-   
-   
-   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-   
-       <script type="text/javascript">
-           function ShowGitment(){
-               document.getElementById("gitment-display-button").style.display = "none";
-               document.getElementById("gitment-container").style.display = "block";
-               var gitment = new Gitment({
-                   id: document.location.href, 
-                   owner: 'huangbuhuan',
-                   repo: 'git-comments',
-                   oauth: {
-                       client_id: '',
-                       client_secret: '',
-                   }});
-               gitment.render('gitment-container');
-           }
-       </script>
-   
 
 
   
