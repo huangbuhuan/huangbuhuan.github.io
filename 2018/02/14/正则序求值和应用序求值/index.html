@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="SICP," />
 
 
 
@@ -96,14 +96,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://blog.buhuan.me/tags/index.html">
+<meta name="description" content="介绍应用序求值是解释器首先对运算符和各个运算对象求值，而后将得到的过程应用于实际参数。正则序求值是先不求出运算对象的值，直到实际需要它们的值时再去做求值。 定义函数 (define (square x) (* x x)) (define (sum-of-squares x y)     (+ square x) (square y))) (define (f a)     (sum-of-squa">
+<meta name="keywords" content="SICP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则序求值和应用序求值">
+<meta property="og:url" content="https://blog.buhuan.me/2018/02/14/正则序求值和应用序求值/index.html">
 <meta property="og:site_name" content="代码改变世界">
+<meta property="og:description" content="介绍应用序求值是解释器首先对运算符和各个运算对象求值，而后将得到的过程应用于实际参数。正则序求值是先不求出运算对象的值，直到实际需要它们的值时再去做求值。 定义函数 (define (square x) (* x x)) (define (sum-of-squares x y)     (+ square x) (square y))) (define (f a)     (sum-of-squa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-27T13:30:33.350Z">
+<meta property="og:updated_time" content="2018-02-14T07:45:39.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="正则序求值和应用序求值">
+<meta name="twitter:description" content="介绍应用序求值是解释器首先对运算符和各个运算对象求值，而后将得到的过程应用于实际参数。正则序求值是先不求出运算对象的值，直到实际需要它们的值时再去做求值。 定义函数 (define (square x) (* x x)) (define (sum-of-squares x y)     (+ square x) (square y))) (define (f a)     (sum-of-squa">
 
 
 
@@ -132,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.buhuan.me/tags/"/>
+  <link rel="canonical" href="https://blog.buhuan.me/2018/02/14/正则序求值和应用序求值/"/>
 
 
 
 
 
-  <title>tags | 代码改变世界</title>
+  <title>正则序求值和应用序求值 | 代码改变世界</title>
   
 
 
@@ -293,40 +297,242 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.buhuan.me/2018/02/14/正则序求值和应用序求值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄步欢">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="代码改变世界">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">tags</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 10 个标签
+          <h2 class="post-title" itemprop="name headline">正则序求值和应用序求值</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-14T15:30:40+08:00">
+                2018-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SICP/" itemprop="url" rel="index">
+                    <span itemprop="name">SICP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/14/正则序求值和应用序求值/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/14/正则序求值和应用序求值/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  371
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Dockerfile/" style="font-size: 12px; color: #ccc">Dockerfile</a> <a href="/tags/JVM/" style="font-size: 12px; color: #ccc">JVM</a> <a href="/tags/Java/" style="font-size: 30px; color: #111">Java</a> <a href="/tags/Java8/" style="font-size: 12px; color: #ccc">Java8</a> <a href="/tags/Lombok/" style="font-size: 12px; color: #ccc">Lombok</a> <a href="/tags/Netty/" style="font-size: 12px; color: #ccc">Netty</a> <a href="/tags/SICP/" style="font-size: 12px; color: #ccc">SICP</a> <a href="/tags/Steam/" style="font-size: 12px; color: #ccc">Steam</a> <a href="/tags/类加载机制/" style="font-size: 12px; color: #ccc">类加载机制</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>应用序求值是解释器首先对运算符和各个运算对象求值，而后将得到的过程应用于实际参数。正则序求值是先不求出运算对象的值，直到实际需要它们的值时再去做求值。</p>
+<pre><code>定义函数
+(define (square x) (* x x))
+(define (sum-of-squares x y)
+    (+ square x) (square y)))
+(define (f a)
+    (sum-of-squares (+ a 1) (* a 2)))
+
+应用序求值过程：
+(f 5)
+(sum-of-squares (+ 5 1) (* 5 2))
+(+ (square 6) (seuare 10))
+(+ (* 6 6) (* 10 10))
+(+ 36 + 100)
+136
+
+正则序求值过程(只包含基本运算时才执行求值)：
+(f 5)
+(sum-of-squares (+ 5 1) (* 5 2))
+(+ (square (+ 5 1) (square (* 5 2))))
+(+ ((* (+ 5 1) (+ 5 1)) (* (* 5 2) (* 5 2))))
+(+ (* 6 6) (* 10 10))
+(+ 36 100)
+136
+</code></pre><p>在使用应用序求值时可以减少重复求值，如(+ 5 1)在使用正则序求值时会计算两次，而在应用序时求值时只计算一次，在超出了可以采用替换方式模拟的过程范围之后，正则序求值将会变得复杂的多, 而在另一些方面, 正则序也可以成为特别有价值的工具。</p>
+<h1 id="校验语言是哪种求值方式"><a href="#校验语言是哪种求值方式" class="headerlink" title="校验语言是哪种求值方式"></a>校验语言是哪种求值方式</h1><p>校验语言是正则序还是应用序求值，可以使用如下多表达式：如果是应用序求值就会递归调用，如果是正则序求值，会输出0。</p>
+<pre><code>(define (p) (p))
+(define (test x y)
+    (if (= x 0)
+             0
+             y))
+(test 0 (p))
+</code></pre><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<li><a href="https://book.douban.com/subject/1148282/" target="_blank" rel="noopener">《Structure and Interpretation of Computer Programs》</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SICP/" rel="tag"># SICP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/30/Java8特性及常用API介绍/" rel="next" title="Java8特性及常用API介绍">
+                <i class="fa fa-chevron-left"></i> Java8特性及常用API介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -335,6 +541,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -355,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/photo.jpg"
@@ -449,6 +675,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#校验语言是哪种求值方式"><span class="nav-number">2.</span> <span class="nav-text">校验语言是哪种求值方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -576,10 +818,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -597,6 +839,18 @@
       <script id="dsq-count-scr" src="https://huangbh.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.buhuan.me/2018/02/14/正则序求值和应用序求值/';
+          this.page.identifier = '2018/02/14/正则序求值和应用序求值/';
+          this.page.title = '正则序求值和应用序求值';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://huangbh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
