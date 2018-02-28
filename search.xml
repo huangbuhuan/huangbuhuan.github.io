@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[梯子搭建教程]]></title>
+    <url>%2F2018%2F02%2F28%2F%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[前言本篇文章主要记录如何开启BBR和利用VPS搭建梯子的过程，请不要用于违法用途。 VPS推荐vultr本人在使用的vps服务，价格为2.5刀每个月，搭建完梯子以后还可以在服务器上挂点其他东西。除了vultr以后还有可以购买搬瓦工、digitalocean等其他VPS服务。 一键开启BBRGoogle开源了它的TCP BBR算法，用来加速网络访问用的。 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh 安装完以后会提示重启，输入y就可以了。 重启后输入 sysctl net.ipv4.tcp_available_congestion_control 可以看到bbr模块已经开启，说明安装成功 net.ipv4.tcp_available_congestion_control = reno cubic bbr 一键安装SSR终端输入 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh chmod +x shadowsocks-all.sh ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 按照脚本提示输入即可 客户端下载根据自己的环境下载对应的客服端，并填入账号密码。 https://github.com/shadowsocksr-backup/shadowsocks-rss 打开Google官网查看是否可以访问，如果可以说明连接成功。 参考链接 一键开启BBR 一键开启SSR]]></content>
+      <categories>
+        <category>梯子</category>
+      </categories>
+      <tags>
+        <tag>VPS</tag>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[正则序求值和应用序求值]]></title>
     <url>%2F2018%2F02%2F14%2F%E6%AD%A3%E5%88%99%E5%BA%8F%E6%B1%82%E5%80%BC%E5%92%8C%E5%BA%94%E7%94%A8%E5%BA%8F%E6%B1%82%E5%80%BC%2F</url>
     <content type="text"><![CDATA[介绍应用序求值是解释器首先对运算符和各个运算对象求值，而后将得到的过程应用于实际参数。正则序求值是先不求出运算对象的值，直到实际需要它们的值时再去做求值。 定义函数 (define (square x) (* x x)) (define (sum-of-squares x y) (+ square x) (square y))) (define (f a) (sum-of-squares (+ a 1) (* a 2))) 应用序求值过程： (f 5) (sum-of-squares (+ 5 1) (* 5 2)) (+ (square 6) (seuare 10)) (+ (* 6 6) (* 10 10)) (+ 36 + 100) 136 正则序求值过程(只包含基本运算时才执行求值)： (f 5) (sum-of-squares (+ 5 1) (* 5 2)) (+ (square (+ 5 1) (square (* 5 2)))) (+ ((* (+ 5 1) (+ 5 1)) (* (* 5 2) (* 5 2)))) (+ (* 6 6) (* 10 10)) (+ 36 100) 136 在使用应用序求值时可以减少重复求值，如(+ 5 1)在使用正则序求值时会计算两次，而在应用序时求值时只计算一次，在超出了可以采用替换方式模拟的过程范围之后，正则序求值将会变得复杂的多, 而在另一些方面, 正则序也可以成为特别有价值的工具。 校验语言是哪种求值方式校验语言是正则序还是应用序求值，可以使用如下多表达式：如果是应用序求值就会递归调用，如果是正则序求值，会输出0。 (define (p) (p)) (define (test x y) (if (= x 0) 0 y)) (test 0 (p)) 参考链接 《Structure and Interpretation of Computer Programs》]]></content>
