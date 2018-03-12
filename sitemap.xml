@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.buhuan.me/2018/01/30/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</loc>
+    
+    <lastmod>2018-03-12T13:55:55.520Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.buhuan.me/2018/02/28/%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2018-02-28T16:39:39.165Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://blog.buhuan.me/2018/01/30/Java8%E7%89%B9%E6%80%A7%E5%8F%8A%E5%B8%B8%E7%94%A8API%E4%BB%8B%E7%BB%8D/</loc>
     
     <lastmod>2018-01-30T15:25:24.328Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.buhuan.me/2018/01/30/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</loc>
-    
-    <lastmod>2018-01-30T15:23:03.929Z</lastmod>
     
   </url>
   
