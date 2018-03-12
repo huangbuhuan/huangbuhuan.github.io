@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="代码改变世界">
 <meta property="og:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-12T13:57:40.106Z">
+<meta property="og:updated_time" content="2018-03-12T14:04:03.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java虚拟机类加载机制">
 <meta name="twitter:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,367
+                  2,175
                 </span>
               
 
@@ -542,131 +542,6 @@ System.out.println(bsClassLoader);
 sun.misc.Launcher$ExtClassLoader@4617c264
 null
 </code></pre><p>系统类加载器可以直接获取，扩展类加载器的也可以使用，不过启动类加载器是由C++实现的，逻辑上是不存在的，所以为null。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><strong>Java魔数</strong>：SUN公司规定每个Class文件都必须以一个word(4个字节)开始，它的唯一作用是确定这个文件是否为一个能被虚拟机接收的Class文件。用十六进制打开Class文件就可以看到Class文件的魔数是0XCAFEBABE。</p>
-<p><strong>主次版本号</strong>：魔数的后续的内容就是一个word的长度来表示生产的class文件的版本号，版本号分为主版本号和次版本号,高版本JDK可以向下兼容以前的Class文件，但不能运行以后版本的Class文件。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">编译器版本</th>
-<th style="text-align:left">十六进制版本号</th>
-<th style="text-align:left">十进制版本号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">JDK1.9</td>
-<td style="text-align:left">0X35</td>
-<td style="text-align:left">53</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.8</td>
-<td style="text-align:left">0X34</td>
-<td style="text-align:left">52</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.7</td>
-<td style="text-align:left">0X33</td>
-<td style="text-align:left">51</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.6</td>
-<td style="text-align:left">0X32</td>
-<td style="text-align:left">50</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.5</td>
-<td style="text-align:left">0X31</td>
-<td style="text-align:left">49</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.4</td>
-<td style="text-align:left">0X30</td>
-<td style="text-align:left">48</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.3</td>
-<td style="text-align:left">0X2F</td>
-<td style="text-align:left">47</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.2</td>
-<td style="text-align:left">0X2E</td>
-<td style="text-align:left">46</td>
-</tr>
-<tr>
-<td style="text-align:left">JDK1.1</td>
-<td style="text-align:left">0X2D</td>
-<td style="text-align:left">45</td>
-</tr>
-</tbody>
-</table>
-<p>常量池的<strong>tag</strong>项说明</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">常量类型</th>
-<th style="text-align:left">值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">CONSTANT_Class</td>
-<td style="text-align:left">7</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Fieldref</td>
-<td style="text-align:left">9</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Methodref</td>
-<td style="text-align:left">10</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_INterfaceMethodref</td>
-<td style="text-align:left">11</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_String</td>
-<td style="text-align:left">8</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Integer</td>
-<td style="text-align:left">3</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Float</td>
-<td style="text-align:left">4</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Long</td>
-<td style="text-align:left">5</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Double</td>
-<td style="text-align:left">6</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_NameAndType</td>
-<td style="text-align:left">12</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_Utf8</td>
-<td style="text-align:left">1</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_MethodHandle</td>
-<td style="text-align:left">15</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_MethodType</td>
-<td style="text-align:left">16</td>
-</tr>
-<tr>
-<td style="text-align:left">CONSTANT_InvokeDynamic</td>
-<td style="text-align:left">18</td>
-</tr>
-</tbody>
-</table>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
 <li><a href="http://www.hkjdy.cn/JVM6-1/" target="_blank" rel="noopener">深入理解Java虚拟机(6)-Class类文件结构</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/Java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8" target="_blank" rel="noopener">Java类加载器</a></li>
@@ -892,7 +767,7 @@ null
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java类加载的过程"><span class="nav-number">1.</span> <span class="nav-text">Java类加载的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加载阶段"><span class="nav-number">1.0.1.</span> <span class="nav-text">加载阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证阶段"><span class="nav-number">1.0.2.</span> <span class="nav-text">验证阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备阶段"><span class="nav-number">1.0.3.</span> <span class="nav-text">准备阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析阶段"><span class="nav-number">1.0.4.</span> <span class="nav-text">解析阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化阶段"><span class="nav-number">1.0.5.</span> <span class="nav-text">初始化阶段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载过器"><span class="nav-number">1.1.</span> <span class="nav-text">类加载过器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java类加载的过程"><span class="nav-number">1.</span> <span class="nav-text">Java类加载的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加载阶段"><span class="nav-number">1.0.1.</span> <span class="nav-text">加载阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证阶段"><span class="nav-number">1.0.2.</span> <span class="nav-text">验证阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备阶段"><span class="nav-number">1.0.3.</span> <span class="nav-text">准备阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析阶段"><span class="nav-number">1.0.4.</span> <span class="nav-text">解析阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化阶段"><span class="nav-number">1.0.5.</span> <span class="nav-text">初始化阶段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载过器"><span class="nav-number">1.1.</span> <span class="nav-text">类加载过器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">2.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -941,7 +816,7 @@ null
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.0k字</span>
+  <span class="post-count">博客全站共7.8k字</span>
 </div>
 
         
