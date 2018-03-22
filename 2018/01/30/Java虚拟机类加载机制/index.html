@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="代码改变世界">
 <meta property="og:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T03:05:24.744Z">
+<meta property="og:updated_time" content="2018-03-22T03:07:51.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java虚拟机类加载机制">
 <meta name="twitter:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
@@ -488,8 +488,8 @@
 </li>
 <li>字节码校验：<ul>
 <li>保证任意时刻操作数栈的数据类型与指令代码都能配合工作</li>
-<li>保证跳转指令不会跳转到防反弹以外的字节码指令上</li>
-<li>保证方法体重的类型转换是有效的     </li>
+<li>保证跳转指令不会跳转到方法体以外的字节码指令上</li>
+<li>保证方法体中的类型转换是有效的     </li>
 </ul>
 </li>
 <li>符合引用校验：<ul>
