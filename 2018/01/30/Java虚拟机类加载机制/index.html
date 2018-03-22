@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="代码改变世界">
 <meta property="og:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-12T14:04:03.764Z">
+<meta property="og:updated_time" content="2018-03-22T03:05:24.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java虚拟机类加载机制">
 <meta name="twitter:description" content="Java类加载的过程类从被加载到虚拟机内存中开始，到卸载出内存为止，它的整个生命周期包括：加载、验证、准备、解析、初始化、使用和卸载七个阶段。 对于第一阶段的加载，Java虚拟机规范中没有强制约束。但是初始化只有五种情况：  用new、getInstance、putstatic、或invokestatic关键字实例化对象，调用或设置类的静态字段，以及调用一个类的静态方法的时候。 使用反射对类进行调">
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,175
+                  2,187
                 </span>
               
 
@@ -482,7 +482,7 @@
 <li>元数据校验：<ul>
 <li>验证当前类是否有父类</li>
 <li>是否继承了final类</li>
-<li>如果不是抽象类是否实现了所有方法</li>
+<li>如果不是抽象类，是否实现了所有父类或接口需要实现的所有方法</li>
 <li>类中的字段、方法是否与父类产生矛盾     </li>
 </ul>
 </li>
