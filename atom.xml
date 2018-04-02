@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.buhuan.me/"/>
-  <updated>2018-03-31T02:53:50.771Z</updated>
+  <updated>2018-02-28T16:39:39.165Z</updated>
   <id>https://blog.buhuan.me/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>每天一个Linux命令-ssh</title>
-    <link href="https://blog.buhuan.me/2018/03/31/%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-ssh/"/>
-    <id>https://blog.buhuan.me/2018/03/31/每天一个Linux命令-ssh/</id>
-    <published>2018-03-31T02:23:23.000Z</published>
-    <updated>2018-03-31T02:53:50.771Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>SSH是一个系统管理工具，它能够让你访问远程计算机上的shell，进而执行各种命令。SHH是Secure Shell的缩写，它使用加密通道来传输网络数据。SSH服务默认运行在22端口上。</p><h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol><li><p>连接运行SSH服务器的远程主机</p><pre><code>ssh username@remote_host</code></pre></li><li><p>ssh采用交互方式询问用户密码，一旦访问成功，将会返回一个shell。有些ssh服务器没有使用22端口，我们可以使用-p指定端口</p><pre><code>ssh username@remote_host -p 422</code></pre></li><li><p>如果想要在远程主机之心命令，并将输出显示在本地shell中可以使用</p><pre><code>ssh username@remote_host &apos;COMMOND&apos;</code></pre><p> 可以输入多条指令</p><pre><code>ssh username@remote_host &quot;COMMOND1; COMMOND2; COMMOND3&quot;</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;SSH是一个系统管理工具，它能够让你访问远程计算机上的shell，进而执行各种命令。SHH是Secure Shell的缩写，它使用加密通道来
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>梯子搭建教程</title>
