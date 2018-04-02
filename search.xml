@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[每天一个Linux命令-ssh]]></title>
+    <url>%2F2018%2F03%2F31%2F%E6%AF%8F%E5%A4%A9%E4%B8%80%E4%B8%AALinux%E5%91%BD%E4%BB%A4-ssh%2F</url>
+    <content type="text"><![CDATA[简介SSH是一个系统管理工具，它能够让你访问远程计算机上的shell，进而执行各种命令。SHH是Secure Shell的缩写，它使用加密通道来传输网络数据。SSH服务默认运行在22端口上。 练习 连接运行SSH服务器的远程主机 ssh username@remote_host ssh采用交互方式询问用户密码，一旦访问成功，将会返回一个shell。有些ssh服务器没有使用22端口，我们可以使用-p指定端口 ssh username@remote_host -p 422 如果想要在远程主机之心命令，并将输出显示在本地shell中可以使用 ssh username@remote_host &apos;COMMOND&apos; 可以输入多条指令 ssh username@remote_host &quot;COMMOND1; COMMOND2; COMMOND3&quot;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[梯子搭建教程]]></title>
     <url>%2F2018%2F02%2F28%2F%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[前言本篇文章主要记录如何开启BBR和利用VPS搭建梯子的过程，请不要用于违法用途。 VPS推荐vultr本人在使用的vps服务，价格为2.5刀每个月，搭建完梯子以后还可以在服务器上挂点其他东西。除了vultr以后还有可以购买搬瓦工、digitalocean等其他VPS服务。 一键开启BBRGoogle开源了它的TCP BBR算法，用来加速网络访问用的。 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh 安装完以后会提示重启，输入y就可以了。 重启后输入 sysctl net.ipv4.tcp_available_congestion_control 可以看到bbr模块已经开启，说明安装成功 net.ipv4.tcp_available_congestion_control = reno cubic bbr 一键安装SSR终端输入 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh chmod +x shadowsocks-all.sh ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 按照脚本提示输入即可 客户端下载根据自己的环境下载对应的客服端，并填入账号密码。 https://github.com/shadowsocksr-backup/shadowsocks-rss 打开Google官网查看是否可以访问，如果可以说明连接成功。 参考链接 一键开启BBR 一键开启SSR]]></content>
