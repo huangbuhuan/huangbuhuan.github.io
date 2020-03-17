@@ -10,11 +10,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[自己动手写跳表]]></title>
-    <url>%2F2020%2F03%2F16%2F%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%E5%86%99%E8%B7%B3%E8%A1%A8%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[梯子搭建教程]]></title>
     <url>%2F2018%2F02%2F28%2F%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[前言本篇文章主要记录如何开启BBR和利用VPS搭建梯子的过程，请不要用于违法用途。 VPS推荐vultr本人在使用的vps服务，价格为2.5刀每个月，搭建完梯子以后还可以在服务器上挂点其他东西。除了vultr以后还有可以购买搬瓦工、digitalocean等其他VPS服务。 一键开启BBRGoogle开源了它的TCP BBR算法，用来加速网络访问用的。 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh 安装完以后会提示重启，输入y就可以了。 重启后输入 sysctl net.ipv4.tcp_available_congestion_control 可以看到bbr模块已经开启，说明安装成功 net.ipv4.tcp_available_congestion_control = reno cubic bbr 一键安装SSR终端输入 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh chmod +x shadowsocks-all.sh ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 按照脚本提示输入即可 客户端下载根据自己的环境下载对应的客服端，并填入账号密码。 https://github.com/shadowsocksr-backup/shadowsocks-rss 打开Google官网查看是否可以访问，如果可以说明连接成功。 参考链接 一键开启BBR 一键开启SSR]]></content>
