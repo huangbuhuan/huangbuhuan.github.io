@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[缓存更新策略]]></title>
+    <url>%2F2020%2F03%2F19%2F%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5%2F</url>
+    <content type="text"><![CDATA[在分布式系统中有一个比较常见的问题，缓存怎么更新，是先更新缓存还是先更新数据库。 写多读少的场景最常见的是Cache Aside Pattern 具体逻辑： 缓存失效：读取数据库中的数据并加载到缓存中 缓存命中：直接返回 缓存更新：先更新数据库，然后使缓存中的数据失效 伪代码： 12345678910111213141516171819202122// 先查询缓存，没有查询到从数据库获取并更新public &lt;K, V&gt; V select(K k) &#123; // flag1 V v = cache.get(K); if (v != null) &#123; return v; &#125; // flag2 V v = db.get(k); // flag3 cache.add(k, v); return v;&#125;// 更新数据库并使缓存失效,放在一个事务里public void update(K k, V v) &#123; // flag4 db.update(v); // flag5 cache.delete(k);&#125; 使用这种方式是在查询的时候，更新缓存信息, 在更新操作只会让缓存失效。可能会出现的问题是在更新的时候，事务还没有提交(flag5结束还没有commit)，缓存中的key已经删除，正好来了一个查询操作，读取了脏数据(flag2),并更新到缓存中这会使缓存中长时间存在脏数据。 结论：Cache Aside Pattern可以很好的防止写操作比较多的缓存更新问题，但是在读操作比较多的场景可能会出现长时间数据不一致的情况。 读多写少的场景在读比较多写比较少的，可以采用直接更新缓存，而不是删除缓存。 伪代码 12345678910111213141516171819202122// 先查询缓存，没有查询到从数据库获取并更新public &lt;K, V&gt; V select(K k) &#123; // flag1 V v = cache.get(K); if (v != null) &#123; return v; &#125; // flag2 V v = db.get(k); // flag3 cache.add(k, v); return v;&#125;// 更新数据库并更新缓存,放在一个事务里public void update(K k, V v) &#123; // flag4 db.update(v); // flag5 cache.updaet(k, v);&#125; 弊端是使用这种方式更新缓存，并发写(缓存flag5)会导致缓存出现脏数据，当然因为是写少的场景所以可以忽略这种情况。不过可以牺牲一点性能，通过加乐观锁来解决这个问题。 伪代码 123456789// 更新数据库并更新缓存,放在一个事务里，并加锁public void update(K k, V v) &#123; lock(k); // flag4 db.update(v); // flag5 cache.updaet(k, v); unlock();&#125; 参考链接 Cache-Aside pattern) 缓存更新的套路 ​]]></content>
+      <tags>
+        <tag>Cache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用zeit加速Github Pages访问]]></title>
     <url>%2F2020%2F03%2F16%2F%E4%BD%BF%E7%94%A8zeit%E5%8A%A0%E9%80%9FGithub-Pages%E8%AE%BF%E9%97%AE%2F</url>
     <content type="text"><![CDATA[在国内访问Github速度有点慢，如果要使用阿里或者腾讯的cdn需要备案。现提供一种不需要备案加速博客访问速度的方法。 1. 注册访问并注册https://zeit.co 账号，我这里使用了Github授权方式注册的。 2. 授权并导入仓库在Dashboard右边选择导入项目 根据自己的需要选择仓库, 我这里选择了Github ​ 选择需要导入的仓库 然后跳转到Github授权访问页面，选择一个一个自己的仓库，刷新下zeit的页面，并选择根目录 我的静态博客页面是使用Hexo生成的所有选择了Other, 并点击Deploy 3.添加自己的域名查看项目的右上角，添加一个自定义的域名 在自己的域名服务商添加一条CNAME的解析记录，添加完后看下有没有解析成功就可以了。 ​]]></content>
