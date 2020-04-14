@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.buhuan.me/"/>
-  <updated>2020-03-18T18:32:19.765Z</updated>
+  <updated>2020-04-14T17:04:32.803Z</updated>
   <id>https://blog.buhuan.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用IDEA Debug Java源码</title>
+    <link href="https://blog.buhuan.me/2020/04/15/%E4%BD%BF%E7%94%A8IDEA-Debug-Java%E6%BA%90%E7%A0%81/"/>
+    <id>https://blog.buhuan.me/2020/04/15/使用IDEA-Debug-Java源码/</id>
+    <published>2020-04-14T16:34:33.000Z</published>
+    <updated>2020-04-14T17:04:32.803Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="导入源代码"><a href="#导入源代码" class="headerlink" title="导入源代码"></a>导入源代码</h1><p>在IDEA里查看源码的地址</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtrtrptoxj30u00u3jzn.jpg" alt="image-20200415004101879"></p><p>找到对应文件夹, 并解压src.zip压缩文件夹，复制源码到idea里, 将编译参数调大点，不然直接卡死。</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtrvsfoa9j30mu0q4abg.jpg" alt="image-20200415004258746"></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtshvekz0j31e60aujtt.jpg" alt="image-20200415010414183"></p><h1 id="修改源代码路径"><a href="#修改源代码路径" class="headerlink" title="修改源代码路径"></a>修改源代码路径</h1><p>修改SourcePath为当前拷贝的路径    </p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtrxw9fm8j30u00uegn9.jpg" alt="image-20200415004500054"></p><h1 id="修改IDEA参数"><a href="#修改IDEA参数" class="headerlink" title="修改IDEA参数"></a>修改IDEA参数</h1><p>将debugger的stepping里的Do not step into the classes勾去掉</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtse1aisqj30u80hcdi2.jpg" alt="image-20200415010032050"></p><p>这样就可以在Debug的时候在源代码里写注释了</p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdtrzn33pwj30u0086gmb.jpg" alt="image-20200415004644433"></p><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdts1hwrhrj31360be75m.jpg" alt="image-20200415004828074"></p><h1 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h1><p>源代码查看顺序lang -&gt; util -&gt; io -&gt; nio </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;导入源代码&quot;&gt;&lt;a href=&quot;#导入源代码&quot; class=&quot;headerlink&quot; title=&quot;导入源代码&quot;&gt;&lt;/a&gt;导入源代码&lt;/h1&gt;&lt;p&gt;在IDEA里查看源码的地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/lar
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>缓存更新策略</title>
