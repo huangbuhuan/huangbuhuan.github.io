@@ -9,13 +9,71 @@
     <atom:link href="https://blog.buhuan.me/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 23 Aug 2023 15:18:56 GMT</pubDate>
+    <pubDate>Thu, 24 Aug 2023 07:55:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>go语言学习笔记二</title>
+      <link>https://blog.buhuan.me/2023/08/24/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link>
+      <guid>https://blog.buhuan.me/2023/08/24/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid>
+      <pubDate>Thu, 24 Aug 2023 13:30:37 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;接上文继续说一下go的其他语法特性&lt;/p&gt;
+&lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; tit</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>接上文继续说一下go的其他语法特性</p><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>go语言的数组索引从0开始，声明一个数组需要初始化数组长度，而且go的数组是值类型，再赋值时等于做了一次内存拷贝，正因为如此在传递数组给函数时可以使用数组指针传递。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var a [5]int</span><br><span class="line">a := [5]int</span><br><span class="line">a := [5]int &#123;1,2,3,4,5&#125;</span><br><span class="line">b := a</span><br><span class="line">b[0] = 5</span><br><span class="line">fmt.Println(a)</span><br></pre></td></tr></table></figure><h2 id="import和imports"><a href="#import和imports" class="headerlink" title="import和imports"></a>import和imports</h2><p><code>import</code>导入一个包，<code>imports</code>导入多个。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &quot;fmt&quot;</span><br><span class="line">imports (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">    &quot;time&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://blog.buhuan.me/categories/golang/">golang</category>
+      
+      
+      <category domain="https://blog.buhuan.me/tags/golang/">golang</category>
+      
+      <category domain="https://blog.buhuan.me/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      
+      <comments>https://blog.buhuan.me/2023/08/24/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>mac ssh报错SSH no matching host key type found</title>
+      <link>https://blog.buhuan.me/2023/08/24/ssh%E6%8A%A5%E9%94%99/</link>
+      <guid>https://blog.buhuan.me/2023/08/24/ssh%E6%8A%A5%E9%94%99/</guid>
+      <pubDate>Thu, 24 Aug 2023 07:34:37 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot; title=&quot;解决办法&quot;&gt;&lt;/a&gt;解决办法&lt;/h2&gt;&lt;p&gt;修改~&amp;#x2F;.ssh&amp;#x2F;config&lt;/p&gt;
+&lt;figure class=&quot;highlight plainte</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>修改~&#x2F;.ssh&#x2F;config</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host xxx.buhuan.me</span><br><span class="line">  HostName xxx.buhuan.me</span><br><span class="line">  User xxxx</span><br><span class="line">  Port 2222</span><br><span class="line">  HostKeyAlgorithms +ssh-rsa</span><br><span class="line">  PubkeyAcceptedKeyTypes +ssh-rsa</span><br></pre></td></tr></table></figure><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><img src="https://www.openssh.com/txt/release-8.7" alt="https://www.openssh.com/txt/release-8.7"></p>]]></content:encoded>
+      
+      
+      <category domain="https://blog.buhuan.me/categories/mac/">mac</category>
+      
+      
+      <category domain="https://blog.buhuan.me/tags/ssh/">ssh</category>
+      
+      <category domain="https://blog.buhuan.me/tags/mac/">mac</category>
+      
+      
+      <comments>https://blog.buhuan.me/2023/08/24/ssh%E6%8A%A5%E9%94%99/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>go语言学习笔记</title>
-      <link>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-      <guid>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <link>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link>
+      <guid>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid>
       <pubDate>Wed, 23 Aug 2023 13:30:37 GMT</pubDate>
       
         
@@ -37,7 +95,7 @@
       <category domain="https://blog.buhuan.me/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
       
       
-      <comments>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
+      <comments>https://blog.buhuan.me/2023/08/23/go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/#disqus_thread</comments>
       
     </item>
     
