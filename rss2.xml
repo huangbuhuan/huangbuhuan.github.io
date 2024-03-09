@@ -9,8 +9,108 @@
     <atom:link href="https://blog.buhuan.me/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 09 Mar 2024 03:24:40 GMT</pubDate>
+    <pubDate>Sat, 09 Mar 2024 07:19:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title></title>
+      <link>https://blog.buhuan.me/2024/03/09/LeetCode11.%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</link>
+      <guid>https://blog.buhuan.me/2024/03/09/LeetCode11.%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</guid>
+      <pubDate>Sat, 09 Mar 2024 06:44:40 GMT</pubDate>
+      
+      <description>题目描述：
+给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。
+
+找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+
+返回容器可以储存的最大水量。
+
+解法一： 使用双指针计算容器内水的面积，最大的面积等于右下标减去左下标 * 较短的容器高度，判断左右两边的高度，移动较小高度的下标
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+
+
+public int maxArea(int[] height) {
+	 int i = 0; 
+	 int j = hei</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><strong>题目描述：</strong><br><code>给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。</code></p><p><code>找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</code></p><p><code>返回容器可以储存的最大水量。</code></p><p><strong>解法一：</strong> 使用双指针计算容器内水的面积，最大的面积等于右下标减去左下标 * 较短的容器高度，判断左右两边的高度，移动较小高度的下标</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public int maxArea(int[] height) &#123;</span><br><span class="line"> int i = 0; </span><br><span class="line"> int j = height.length - 1;</span><br><span class="line"> int ans = 0; </span><br><span class="line"> while (i &lt; j) &#123; </span><br><span class="line">int r = height[j];</span><br><span class="line">int l = height[i]; </span><br><span class="line">ans = Math.max(ans, Math.min(r, l) * (j - i)); </span><br><span class="line">if (r &gt; l) &#123; </span><br><span class="line">i++; </span><br><span class="line">&#125; else &#123;</span><br><span class="line">j--; </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">return ans; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      
+      
+      <comments>https://blog.buhuan.me/2024/03/09/LeetCode11.%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>LeetCode283.移动零</title>
+      <link>https://blog.buhuan.me/2024/03/09/LeetCode283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/</link>
+      <guid>https://blog.buhuan.me/2024/03/09/LeetCode283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/</guid>
+      <pubDate>Sat, 09 Mar 2024 04:01:37 GMT</pubDate>
+      
+      <description>题目描述：
+给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+
+**请注意** ，必须在不复制数组的情况下原地对数组进行操作。
+
+解法一：
+遍历两次，第一次遍历将不是0的数往前挪，第二次遍历将其他为零的坑位置为0
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+
+public void moveZeroes(int[] nums) {
+	int j = 0;
+	for (int i = 0; i &lt; nums.length; i++) {
+		if (nums[i] != 0) {
+			nums[j] = nums[i];
+			j++</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p><strong>题目描述：</strong><br><code>给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。</code></p><p><code>**请注意** ，必须在不复制数组的情况下原地对数组进行操作。</code></p><p>解法一：<br>遍历两次，第一次遍历将不是0的数往前挪，第二次遍历将其他为零的坑位置为0</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public void moveZeroes(int[] nums) &#123;</span><br><span class="line">int j = 0;</span><br><span class="line">for (int i = 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">if (nums[i] != 0) &#123;</span><br><span class="line">nums[j] = nums[i];</span><br><span class="line">j++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">for (; j &lt; nums.length; j++) &#123;</span><br><span class="line">nums[j] = 0;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>解法二：<br>遍历一次，遍历过程中将i不等于零的数值和j的数值交换位置, 并将i的数值置为零</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public void moveZeroes(int[] nums) &#123;</span><br><span class="line">int j = 0;</span><br><span class="line">for (int i = 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">if (nums[i] != 0) &#123;</span><br><span class="line">if (i &gt; j) &#123;</span><br><span class="line">nums[j] = nums[i];</span><br><span class="line">nums[i] = 0;</span><br><span class="line">&#125;</span><br><span class="line">j++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://blog.buhuan.me/categories/LeetCode/">LeetCode</category>
+      
+      
+      <category domain="https://blog.buhuan.me/tags/LeetCode/">LeetCode</category>
+      
+      <category domain="https://blog.buhuan.me/tags/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</category>
+      
+      
+      <comments>https://blog.buhuan.me/2024/03/09/LeetCode283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>go语言学习笔记二</title>
